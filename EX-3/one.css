@@ -1,0 +1,54 @@
+body{
+    background:linear-gradient(to right,#18313b,#264b58,#326378) ;
+    margin: 0;
+}
+#form{
+    width: 400px;
+    margin: 05% auto 0 auto;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 20px;
+}
+h1{
+    text-align: center;
+    color: rgb(6, 6, 6);
+    margin-left: 05px;
+}
+#form button{
+    background-color: rgb(74, 88, 207);
+    color: white;
+    border: 02px solid rgb(3, 3, 3);
+    padding: 03px;
+    margin: 20px 0px;
+    border-radius: 05px;
+    cursor:auto;
+    font-size: 15px;
+    width: 20%;
+}
+.input-group{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    padding-top: 10px;
+}
+.input-groups{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+.input-group input{
+    border-radius: 05px;
+    font-size: 15px;
+    margin-top: 05px;
+    padding: 05px;
+    border: solid rgb(138, 177, 180);
+}
+.input-group input:focus{
+    outline: 0;
+}
+.head{
+    padding-top: 10px;
+}
+
+#header{
+    margin-top: 05%;
+}

@@ -1,0 +1,49 @@
+.five h1{
+    width: 100%;
+    position: absolute;
+    top: 30%;
+    transform: translateY(10%);
+    margin-bottom: 40px;
+    padding-left: 37%;
+    color: black;
+    font-weight: 700;
+}
+.ten {
+    margin-left: 05%;
+}
+.ser{
+    display: inline-block;
+}
+.ser img,h2{
+    margin-left: 70px;
+    border-radius: 30px;
+}
+.ser p{
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}
+#three h4{
+    font-weight: 400;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: grey;
+    margin-left: 05%;
+    
+}
+#two h4{
+    font-weight: 400;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: grey;
+    margin-left: 07%;
+}
+h3{
+    margin-left: 50px;
+}
+#second p{
+    font-weight: 600;
+    color: gray;
+    padding-top: 15px;
+}
+.mileage{
+    margin-left: 05%;
+}

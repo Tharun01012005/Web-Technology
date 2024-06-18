@@ -1,0 +1,26 @@
+.five {
+    width: 80%;
+    position: absolute;
+    top: 30%;
+    transform: translateY(10%);
+    margin-bottom: 40px;
+    padding-left:27%;
+    color: white;
+    font-weight: 500;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.foot{
+    margin-left: 15xp;
+}
+.ser{
+    display: inline-block;
+}
+.ser img,h2{
+    margin-left: 70px;
+    border-radius: 30px;
+}
+.ser p{
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: gray;
+}

@@ -1,0 +1,17 @@
+.one{
+    background-color: aquamarine; 
+    
+}
+
+.two{
+    background-color: darkgray;
+    width: fit-content;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.three{
+    color: darkred;
+}
+.two h1{
+    background-color: blueviolet;
+    color: white;
+}

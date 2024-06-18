@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="one.css">
+    <title>FORM</title>
+</head>
+<body>
+    <div id="one">Registration Form</div> <br> <hr> <br> <br>
+    <div class="forms" style="margin-right: 350px;">
+        <form id="registerform" onsubmit="return validateForm()">
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <td>
+                        <input type="text" id="name" name="name"><br>
+                        <span id="nameError" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Gender</th>
+                    <td>
+                        <input type="radio" name="gender" id="male" value="male">Male
+                        <input type="radio" name="gender" id="female" value="female">Female
+                        <input type="radio" name="gender" id="other" value="other">Other<br>
+                        <span id="genderError" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Languages known</th>
+                    <td>
+                        <input type="checkbox" name="languages" id="tamil" value="Tamil">Tamil
+                        <input type="checkbox" name="languages" id="english" value="English">English
+                        <input type="checkbox" name="languages" id="hindi" value="Hindi">Hindi<br>
+                        <span id="languagesError" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Select your district</th>
+                    <td>
+                        <select id="district" name="district" >
+                            <option value="" selected disabled>Select a district</option>
+                            <option value="erode">Erode</option>
+                            <option value="tirupur">Tirupur</option>
+                            <option value="coimbatore">Coimbatore</option>
+                            <option value="Namakkal">Namakkal</option>
+                        </select><br>
+                        <span id="districtError" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td>
+                        <textarea name="address" id="address" cols="30" rows="5"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td>
+                        <input type="text" id="mail"><br>
+                        <span id="mailError" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>Phone No</th>
+                    <td>
+                        <input type="text" id="phone"><br>
+                        <span id="phoneError" class="error"></span>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <th>Set a password</th>
+                    <td>
+                        <input type="password" name="password" id="password"><br>
+                        <span id="passwordError" class="error"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td ><button type="submit">Register</button>
+                    <button type="reset" id="reset">Clear</button></td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+
+    <script>
+        function validateForm() {
+
+            var flag1=true;
+            var name = document.getElementById("name").value.trim();
+            var email = document.getElementById("mail").value.trim();
+            var phone = document.getElementById("phone").value.trim();
+            var gender = document.querySelector('input[name="gender"]:checked');
+            var languages = document.querySelectorAll('input[name="languages"]:checked');
+            var district = document.getElementById("district").value;
+            var password = document.getElementById("password").value;
+
+            nameError=document.getElementById("nameError");
+            mailError=document.getElementById("mailError");
+            phoneError=document.getElementById("phoneError");
+            genderError=document.getElementById("genderError");
+            languagesError=document.getElementById("languagesError");
+            districtError=document.getElementById("districtError");
+            passwordError=document.getElementById("passwordError");
+
+            var nameRegex = /^[a-zA-Z]+(\s[a-zA-Z]+)*$/;
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            var phoneRegex = /^\d{10}$/;
+            var passwordRegex = /(?=.*[A-Z])(?=.*\d)(?=.*\W).{8,15}/;
+            
+            if (!nameRegex.test(name)) {
+                document.getElementById("nameError").textContent = "Name is required";
+                flag1=false;
+            }else {
+                nameError.textContent="";
+            }
+            
+            if (!emailRegex.test(email)) {
+                document.getElementById("mailError").textContent = "Invalid email";
+                flag1=false;
+            }else{
+                mailError.textContent="";
+            }
+
+            if (!phoneRegex.test(phone)) {
+                document.getElementById("phoneError").textContent = "Invalid phone number";
+                flag1=false;
+            }else{
+                phoneError.textContent="";
+            }
+         
+            if (!gender) {
+                document.getElementById("genderError").textContent = "Please select a gender";
+                flag1=false;
+            }else{
+                genderError.textContent="";
+            }
+        
+            if (languages.length === 0) {
+                document.getElementById("languagesError").textContent = "Please select at least one language";
+                flag1=false;
+            }else{
+                languagesError.textContent="";
+            }
+            
+            if (district.length === 0) {
+                document.getElementById("districtError").textContent = "Please select a district";
+                flag1=false;
+            }else{
+                districtError.textContent="";
+            }
+         
+            if (!passwordRegex.test(password)) {
+                passwordError.textContent = "Invalid password";
+                flag1=false;
+            }else{
+                passwordError.textContent="";
+            }
+
+
+            if (flag1) {
+                alert("Form submitted successfully!");
+            }
+          
+            return flag1;
+          
+        }
+        
+    </script>
+</body>
+</html>

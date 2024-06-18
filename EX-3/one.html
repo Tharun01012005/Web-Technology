@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="one.css">
+    <title>EB bill</title>
+</head>
+<body>  
+    <script>
+        function calculateBill() {
+            var units = parseFloat(document.getElementById("units").value);
+            var billAmount = 0;
+
+            if (units <= 100) {
+                billAmount = units * 0;
+            } else if (units <= 200) {
+                billAmount = (100 * 0) + ((units - 100) * 2.25);
+            } else if (units <= 400) {
+                billAmount = (100 * 0) + (100 * 2.25) + ((units - 200) * 4.5);
+            } else if (units <= 500) {
+                billAmount = (100 * 0) + (100 * 2.25) + (200 * 4.5) + ((units - 400) * 6);
+            } else {
+                billAmount = (100 * 0) + (100 * 2.25) + (200 * 4.5) + (100 * 6);
+                billAmount += (units - 500) * 6; 
+            }
+
+            document.getElementById("result").innerHTML = "Your Electricity Bill Amount is ₹" + billAmount.toFixed(2);
+        }
+    </script>
+
+    <div class="head">
+        <img src="TANGEDCO-Logo.jpg" style="width: 05%;height: 05%;margin-left: 47%;">
+        <h1 style="color: white;">TANGEDCO</h1>
+        <h1 style="color: white;">TAMILNADU GENERATION AND DISTRIBUTION CORPORATION LIMITED TANGEDCO</h1> <hr>
+        <h1 style="color: white;" id="header">EB BILL CALCULATOR</h1>    
+    </div>
+     
+    <div class="container">
+        <form id="form">
+            <div class="input-group">
+                <label for="username">Service Number</label>
+                <input type="text" name="username" id="username" >
+            </div>
+            <div class="input-group">
+                <label for="customerid">Name of the Service Holder</label>
+                <input type="text" name="customerid" id="customerid" >
+            </div>
+            <div class="input-group">
+                <label for="phone">Phone No</label>
+                <input type="text" name="phone" id="phone" >
+            </div>
+            <div class="input-group">
+                <label for="currentreading">Units Consumed</label>
+                <input type="number" name="units" id="units">
+            </div>
+            
+            
+            <button type="button" onclick="calculateBill()">Calculate </button>
+          <p id="result"></p>
+        </form>
+    </div> <br> <br>
+</body>
+</html>
