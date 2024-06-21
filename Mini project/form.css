@@ -1,0 +1,63 @@
+body {
+    font-family:'Times New Roman', Times, serif;
+    background:linear-gradient(to right,#1b3743,#203a43,#2c5364) ;
+    margin: 0;
+    padding: 0;
+}
+button{
+    background-color: #f87979;
+    border-radius: 05px;
+    color: rgb(0, 0, 0);
+    width: 20%;
+    margin-left: 10px;
+}
+h1{
+    color: red;
+    margin-left: 3.5%;
+}
+form {
+    width: 30%;
+    background-color:transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px #000000cc;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 35%;
+}
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+}
+input[type="text"],
+select {
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-radius: 05px;
+    font-size: 15px;
+    margin-top: 08px;
+    padding: 05px;
+    border: solid rgba(239, 112, 112, 0.903);
+}
+input[type="date"],
+select {
+    width: calc(100% - 22px);
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-radius: 05px;
+    font-size: 15px;
+    margin-top: 08px;
+    padding: 05px;
+    border: solid rgba(239, 112, 112, 0.902);
+}
+span{
+    color:red;
+}

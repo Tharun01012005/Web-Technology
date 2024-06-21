@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <h1><center>BLOOD DONAR DETAILS</center></h1>
+    <form id="form" method="get">
+        <div id="input-groups">
+        <label for="username">DONAR NAME</label>
+        <input type="text" id="username" name="username" value=""><br> <br>
+        </div>
+
+        <div id="input-groups">
+        <label for="id">DONAR ID</label>
+        <input type="text" id="id" name="id" value=""><br> <br>
+        </div>
+
+        <div id="input-groups">
+        <label for="date">DATE OF BIRTH</label>
+        <input type="date" id="date" name="date" value=""><br> <br>
+        </div>
+
+        <div id="input-groups">
+        <label for="group">BLOOD GROUP</label>
+        <select id="group" name="group">
+            <option value="" selected disabled>Select your Blood Group</option>
+            <option value="A+ve">A+ve</option>
+            <option value="A-ve">A-ve</option>
+            <option value="B+ve">B+ve</option>
+            <option value="B-ve">B-ve</option>
+            <option value="AB+ve">AB+ve</option>
+            <option value="AB-ve">AB-ve</option>
+            <option value="O+ve">O+ve</option>
+            <option value="O-ve">O-ve</option>
+        </select> <br> <br>
+        </div>
+
+        <label>GENDER</label>
+        <input type="radio" id="male" name="gender" value="Male">
+        <label for="male" class="radio-label">Male</label>
+        <input type="radio" id="female" name="gender" value="Female">
+        <label for="female" class="radio-label">Female</label><br> <br>
+
+        <div id="input-groups">
+        <label for="phno">MOBILE NO</label>
+        <input type="text" id="phno" name="phno" value=""><br> <br>
+        </div>
+
+        <div id="input-groups">
+        <label for="emmail">EMAIL</label>
+        <input type="text" id="email" name="email" value=""><br> <br>
+        </div>
+
+        <div id="input-groups">
+        <label for="add">ADDRESS</label>
+        <input type="text" id="add" name="add" value=""><br> <br>
+        </div>    
+
+       <div class="button">
+        <button type="submit" onclick="set('/insert', event)"><b> Insert</b></button>
+        <button type="submit" onclick="set('/delete', event)"><b>Delete</b></button>
+        <button type="submit" onclick="set('/update', event)"><b>Update</b></button>
+        <button type="submit" onclick="set('/display', event)"> <b> Report </b></button>
+       </div>
+    </form>
+
+    <script>
+        function set(path, event) {
+            event.preventDefault(); 
+            document.getElementById('form').action = 'http://localhost:7050' + path;
+            document.getElementById('form').submit(); 
+        }
+    </script>
+</body>
+</html>
+
+
